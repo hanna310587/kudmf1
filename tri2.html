@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUDMFCA Website</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #d8ffd8;
+      margin: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #4B0082;
+      color: yellow;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 2.8em;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: bold;
+      animation: moveText 30s linear infinite;
+    }
+     @keyframes moveText {
+     from {transform: translateX(100%);}
+    to {transform: translateX(-100%);}
+    }
+
+    /* Navigation bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #2E8B57;
+    }
+    nav a {
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #4B0082;
+    }
+
+    /* Page content */
+    .page-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .page-content.active {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2E8B57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Home Page */
+    #home-page .welcome-msg {
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      text-align: left;
+      gap: 32px;
+    }
+    #home-page img {
+      max-width: 800px;
+      max-height: 500px;
+    }
+    #home-page .download-btn {
+      background-color: #4B0082;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* About Us Page */
+    .mission-box, .vision-box, .core-values-box {
+      margin: 20px;
+      padding: 15px;
+      color: black;
+      text-align: left;
+      border-radius: 8px;
+    }
+    .mission-box { background-color: lightblue; }
+    .vision-box { background-color: lightgreen; }
+    .core-values-box { background-color: #f0e6f5; }
+
+    /* Services Page */
+    #services-page h3 {
+      color: #4B0082;
+      text-align: left;
+    }
+
+    /* Leadership Page */
+    .leader-structure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .leader-card {
+      border: 2px solid #4B0082;
+      padding: 10px;
+      width: 150px;
+      margin: 5px;
+      text-align: center;
+      background-color: #e6f2e6;
+      border-radius: 8px;
+    }
+    .leader-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #4B0082;
+    }
+
+    /* Contact Page */
+    #contact-page address {
+      font-style: normal;
+      color: #4B0082;
+    }
+  </style>
+  <script>
+    // JavaScript to handle navigation and display of different pages
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</head>
+<body onload="showPage('home-page')">
+
+  <!-- Header -->
+  <header>
+    <h1>Kingdom Unity Destiny Ministerial Fellowship of Churches</h1>
+    <p>Ministry of Reconciliation</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="javascript:void(0)" onclick="showPage('home-page')">Home</a>
+    <a href="javascript:void(0)" onclick="showPage('about-page')">About Us</a>
+    <a href="javascript:void(0)" onclick="showPage('services-page')">Our Services</a>
+    <a href="javascript:void(0)" onclick="showPage('leadership-page')">Leadership</a>
+    <a href="javascript:void(0)" onclick="showPage('contact-page')">Contact</a>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home-page" class="page-content">
+    <div class="welcome-msg">
+      <img src="ukdmf logo.jpg" alt="KUDMFCA Logo">
+      <div>
+        <h2>Welcome to KUDMFCA</h2>
+        <p>We are delighted to have you here! The Kingdom Unity Destiny Ministerial Fellowship of Churches Association (KUDMFCA) is a network committed to uniting churches and empowering clergy across regions.  
+          
+          Here, you can learn more about our services, access valuable resources,and discover ways to join our ministry of reconciliation.
+
+          Thank you for visiting, and we warmly invite you to be part of this dynamic fellowship!.</p>
+      </div>
+    </div>
+    <a href="#" class="download-btn">Download Profile/Books</a>
+  </div>
+
+  <!-- About Us Page -->
+  <div id="about-page" class="page-content">
+    <h2>About Us</h2>
+    <div class="mission-box">
+      <h3>Our Mission</h3>
+      <p>Our mission is to foster fellowship, provide valuable resources, and support clergy welfare through a shared vision of faith and service.</p>
+    </div>
+    <div class="vision-box">
+      <h3>Our Vision</h3>
+      <p>To be a unified body that empowers clergy and church communities to fulfill their divine purpose through faith, fellowship, and service, 
+        impacting lives and advancing the ministry of reconciliation across nations..</p>
+    </div>
+    <div class="core-values-box">
+      <h3>Core Values</h3>
+      <ul>
+        <li>Unity in Faith – We believe in bringing together diverse ministries under a shared mission.</li>
+        <li>Integrity – We are committed to maintaining honesty and accountability in all we do.</li>
+        <li>Empowerment – We uplift and support clergy to achieve their full potential in ministry.</li>
+        <li>Service – We dedicate ourselves to serving the spiritual and social needs of our communities.</li>
+        <li>Compassion – We foster a spirit of love and care, mirroring Christ’s compassion for all.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Services Page -->
+  <div id="services-page" class="page-content">
+    <h2>Our Services</h2>
+    <h3>KUDMFCA Sacco</h3>
+    <p>Small description about KUDMFCA Sacco services.</p>
+    <h3>KUDMFCA Goshen Theological Bible</h3>
+    <p>Small description about KUDMFCA Bible services.</p>
+    <h3>KUDMFCA Online TV Station</h3>
+    <p>Small description about TV Station services.</p>
+    <h3>Welfare Association for Clergy</h3>
+    <p>Small description about welfare services.</p>
+  </div>
+
+  <!-- Leadership Page -->
+  <div id="leadership-page" class="page-content">
+    <h2>National Leadership</h2>
+    <div class="leader-structure">
+      <div class="leader-card">
+        <img src="prelate .jpg" alt="International Prelate">
+        <h4>International Prelate</h4>
+        <p>Name and Title</p>
+      </div>
+      <div class="leader-card">
+        <img src="president .jpg" alt="President & CEO">
+        <h4>President & CEO Kenya Chapter</h4>
+        <p>Amb. P.K. Mburu</p>
+      </div>
+      <div class="leader-card">
+        <img src="chairman photo.jpg" alt="Chairperson">
+        <h4>Chairperson</h4>
+        <p>Apostle Benson Musyimi</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page -->
+  <div id="contact-page" class="page-content">
+    <h2>Contact Us</h2>
+    <address>
+      <p>Email: kdmfassociation@gmail.com</p>
+      <p>Phone: +0742 033 825</p>
+      <p>Phone: 0799 966 949</p>
+      <p>Location: Nairobi, Kenya</p>
+    </address>
+    <p>&copy; KUDMFCA. All Rights Reserved.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Join Us Via The Link bellow</h2>
+            <a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank">Join Us Here</a>
+</body>
+</html>
